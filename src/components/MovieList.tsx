@@ -21,6 +21,7 @@ export const MovieList = ({ onSelectMovie }: MovieListProps) => {
   if (loading) {
     return (
       <div className="loading-container">
+        <div className="spinner" role="status" aria-label="Cargando películas"></div>
         <p>Cargando películas...</p>
       </div>
     );

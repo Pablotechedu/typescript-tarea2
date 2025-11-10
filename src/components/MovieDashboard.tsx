@@ -50,8 +50,10 @@ export const MovieDashboard = () => {
 
   return (
     <div className="movie-dashboard">
-      <header className="dashboard-header">
-        <h1>🎬 Movie Manager</h1>
+      <header className="dashboard-header" role="banner">
+        <h1>
+          <span role="img" aria-label="Claqueta de cine">🎬</span> Movie Manager
+        </h1>
         <p>Gestión de películas y reseñas con React + TypeScript</p>
       </header>
 
