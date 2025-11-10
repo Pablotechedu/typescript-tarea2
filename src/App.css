@@ -1,0 +1,404 @@
+/* Reset y estilos base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  min-height: 100vh;
+}
+
+/* Dashboard principal */
+.movie-dashboard {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.dashboard-header {
+  text-align: center;
+  color: white;
+  margin-bottom: 40px;
+  padding: 30px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  backdrop-filter: blur(10px);
+}
+
+.dashboard-header h1 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.dashboard-header p {
+  font-size: 1.2rem;
+  opacity: 0.9;
+}
+
+.dashboard-content {
+  display: grid;
+  gap: 30px;
+}
+
+.dashboard-footer {
+  text-align: center;
+  color: white;
+  margin-top: 40px;
+  padding: 20px;
+  opacity: 0.8;
+}
+
+/* Secciones */
+.section {
+  background: white;
+  border-radius: 15px;
+  padding: 25px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.section:hover {
+  transform: translateY(-5px);
+}
+
+.section-title {
+  color: #667eea;
+  margin-bottom: 20px;
+  font-size: 1.8rem;
+  border-bottom: 3px solid #667eea;
+  padding-bottom: 10px;
+}
+
+.section-content {
+  margin-top: 20px;
+}
+
+/* Lista genérica */
+.generic-list {
+  list-style: none;
+  padding: 0;
+}
+
+.generic-list li {
+  padding: 12px;
+  margin-bottom: 10px;
+  background: #f8f9fa;
+  border-radius: 8px;
+  border-left: 4px solid #667eea;
+  transition: all 0.3s ease;
+}
+
+.generic-list li:hover {
+  background: #e9ecef;
+  transform: translateX(5px);
+}
+
+/* MovieCard */
+.movie-card {
+  background: white;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.movie-card:hover {
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15);
+  transform: translateY(-3px);
+}
+
+.movie-card h3 {
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.movie-card p {
+  color: #666;
+  margin-bottom: 8px;
+}
+
+/* Botones */
+button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: 600;
+}
+
+button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.btn-primary {
+  background: #667eea;
+  color: white;
+}
+
+.btn-primary:hover:not(:disabled) {
+  background: #5568d3;
+  transform: scale(1.05);
+}
+
+.btn-disabled {
+  background: #ccc;
+  color: #666;
+}
+
+.btn-positive {
+  background: #28a745;
+  color: white;
+}
+
+.btn-positive:hover:not(:disabled) {
+  background: #218838;
+}
+
+.btn-negative {
+  background: #dc3545;
+  color: white;
+}
+
+.btn-negative:hover:not(:disabled) {
+  background: #c82333;
+}
+
+.btn-remove {
+  background: #ff6b6b;
+  color: white;
+  padding: 6px 12px;
+  font-size: 0.9rem;
+}
+
+.btn-remove:hover {
+  background: #ee5a52;
+}
+
+.btn-add {
+  background: #667eea;
+  color: white;
+  margin-top: 15px;
+}
+
+.btn-add:hover {
+  background: #5568d3;
+}
+
+.btn-clear {
+  background: #6c757d;
+  color: white;
+}
+
+.btn-clear:hover {
+  background: #5a6268;
+}
+
+/* AlertBox */
+.alert-box {
+  padding: 15px 20px;
+  border-radius: 8px;
+  margin-bottom: 15px;
+  border-left: 5px solid;
+}
+
+.alert-error {
+  background: #f8d7da;
+  color: #721c24;
+  border-color: #dc3545;
+}
+
+.alert-success {
+  background: #d4edda;
+  color: #155724;
+  border-color: #28a745;
+}
+
+.alert-warning {
+  background: #fff3cd;
+  color: #856404;
+  border-color: #ffc107;
+}
+
+.alert-info {
+  background: #d1ecf1;
+  color: #0c5460;
+  border-color: #17a2b8;
+}
+
+/* Loading */
+.loading-container {
+  text-align: center;
+  padding: 40px;
+  color: #667eea;
+  font-size: 1.2rem;
+}
+
+/* Películas favoritas */
+.favorite-movies {
+  min-height: 200px;
+}
+
+.empty-message {
+  text-align: center;
+  color: #999;
+  padding: 30px;
+  font-style: italic;
+}
+
+.average-rating {
+  background: #e7f3ff;
+  padding: 15px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  color: #0066cc;
+  font-size: 1.1rem;
+}
+
+.favorites-list {
+  list-style: none;
+  padding: 0;
+}
+
+.favorite-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  margin-bottom: 10px;
+  background: #f8f9fa;
+  border-radius: 8px;
+  border-left: 4px solid #28a745;
+}
+
+.favorite-item span {
+  flex: 1;
+  color: #333;
+}
+
+/* Lista de películas */
+.movie-list {
+  max-height: 600px;
+  overflow-y: auto;
+}
+
+.movie-list-item {
+  color: #333;
+  font-size: 0.95rem;
+}
+
+/* Reseñas */
+.reviews-section {
+  margin-top: 20px;
+}
+
+.review-input-container {
+  margin-bottom: 25px;
+}
+
+.review-input {
+  width: 100%;
+  padding: 15px;
+  border: 2px solid #e0e0e0;
+  border-radius: 8px;
+  font-size: 1rem;
+  margin-bottom: 15px;
+  transition: border-color 0.3s ease;
+}
+
+.review-input:focus {
+  outline: none;
+  border-color: #667eea;
+}
+
+.review-buttons {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.no-reviews {
+  text-align: center;
+  color: #999;
+  padding: 30px;
+  font-style: italic;
+}
+
+.reviews-count {
+  background: #f0f0f0;
+  padding: 10px 15px;
+  border-radius: 8px;
+  margin-bottom: 15px;
+  color: #666;
+  font-weight: 600;
+}
+
+.reviews-list {
+  margin-top: 20px;
+}
+
+.review-item {
+  padding: 15px;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+
+.review-positive {
+  background: #d4edda;
+  color: #155724;
+  border-left: 4px solid #28a745;
+}
+
+.review-negative {
+  background: #f8d7da;
+  color: #721c24;
+  border-left: 4px solid #dc3545;
+}
+
+/* Scrollbar personalizado */
+.movie-list::-webkit-scrollbar {
+  width: 8px;
+}
+
+.movie-list::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 10px;
+}
+
+.movie-list::-webkit-scrollbar-thumb {
+  background: #667eea;
+  border-radius: 10px;
+}
+
+.movie-list::-webkit-scrollbar-thumb:hover {
+  background: #5568d3;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .dashboard-header h1 {
+    font-size: 2rem;
+  }
+
+  .section {
+    padding: 15px;
+  }
+
+  .review-buttons {
+    flex-direction: column;
+  }
+
+  .review-buttons button {
+    width: 100%;
+  }
+}
